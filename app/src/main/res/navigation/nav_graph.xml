@@ -2,10 +2,19 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/characterDetailFragment">
+    app:startDestination="@id/homeScreenFragment">
 
     <fragment
         android:id="@+id/characterDetailFragment"
         android:name="com.bck.rickandmortyclient.CharacterDetailFragment"
-        android:label="CharacterDetailFragment" />
+        android:label="CharacterDetailFragment">
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.bck.rickandmortyclient.HomeScreenFragment"
+        android:label="HomeScreenFragment" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_characterDetailFragment2"
+            app:destination="@id/characterDetailFragment" />
+    </fragment>
 </navigation>
